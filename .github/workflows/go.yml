@@ -1,0 +1,34 @@
+name: Release on Commit
+
+on:
+  push:
+    branches:
+      - main  # 替换为你的主分支名称
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: '1.21'  # 指定 Go 的版本
+
+      - name: Build
+        run: |
+          go build -v ./...  # 根据需要构建你的项目
+
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ github.run_number }}  # 使用运行编号作为版本标签
+          release_name: Release v${{ github.run_number }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
