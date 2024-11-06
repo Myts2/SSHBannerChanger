@@ -1,0 +1,4 @@
+github.com/cakturk/go-netstat v0.0.0-20200220111822-e5b49efee7a5 h1:BjkPE3785EwPhhyuFkbINB+2a1xATwk8SNDWnJiD41g=
+github.com/cakturk/go-netstat v0.0.0-20200220111822-e5b49efee7a5/go.mod h1:jtAfVaU/2cu1+wdSRPWE2c1N2qeAA3K4RH9pYgqwets=
+github.com/rwtodd/Go.Sed v0.0.0-20240405174034-bb8ed5da0fd0 h1:Sm5QvnDuFhkajkdjAHX51h+gyuv+LmkjX//zjpZwIvA=
+github.com/rwtodd/Go.Sed v0.0.0-20240405174034-bb8ed5da0fd0/go.mod h1:c6qgHcSUeSISur4+Kcf3WYTvpL07S8eAsoP40hDiQ1I=
