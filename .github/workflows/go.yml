@@ -20,7 +20,7 @@ jobs:
 
       - name: Build
         run: |
-          go build -o SSHBannerChanger -v ./...  # 根据需要构建你的项目
+          CGO_ENABLED=0 go build -o SSHBannerChanger -v ./...  # 根据需要构建你的项目
 
       - name: Create Release
         id: create_release
